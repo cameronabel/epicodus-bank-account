@@ -6,6 +6,29 @@
   <title>Epicodus Bank Account</title>
 </head>
 <body>
+  <div id="form-area">
+    <form id="new-account">
+        <label for="new-account-name">Account Name</label>
+        <input type="text" id="new-account-name" name="new-account-name">
+        <label for="first-deposit">First Deposit</label>
+        <input type="number" step=".01" id="first-deposit" name="first-deposit">
+        <button>Submit</button>
+    </form>
+  </div>
+  <div id="transaction-area" class="hidden">
+    <form id="account-transaction">
+      <label for="transaction-amount">Funds to transfer</label>
+      <input type="number" step=".01" id="transaction-amount" name="transaction-amount" min="0">
+      <label for="transaction-type">Mode</label>
+      <select id="transaction-type" name="transaction-type">
+        <option value="deposit" selected="true">Deposit</option>
+        <option value="withdrawal">Withdrawal</option>
+      </select>
+      <button>Submit</button>
+    </form>
+  </div>
+    <div id="display-area">
 
+    </div>
 </body>
 </html>
